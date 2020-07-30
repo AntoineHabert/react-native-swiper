@@ -22,8 +22,8 @@ const { width, height } = Dimensions.get("window")
  */
 const styles = {
   container: {
-    backgroundColor: "transparent",
-    position: "relative"
+    // backgroundColor: "transparent",
+    // position: "relative"
   },
 
   wrapper: {
@@ -31,7 +31,9 @@ const styles = {
   },
 
   slide: {
-    backgroundColor: "transparent"
+    // backgroundColor: "transparent",
+    backgroundColor: "red"
+
   },
 
   pagination_x: {
@@ -302,9 +304,9 @@ export default class extends Component {
           x: e.nativeEvent.position * this.state.width
         }
       } else {
-        e.nativeEvent.contentOffset = {
-          y: e.nativeEvent.position * this.state.height
-        }
+        // e.nativeEvent.contentOffset = {
+        //   y: e.nativeEvent.position * this.state.height
+        // }
       }
     }
 
@@ -566,7 +568,7 @@ export default class extends Component {
           styles.buttonWrapper,
           {
             width: this.state.width,
-            height: this.state.height
+            // height: this.state.height
           },
           this.props.buttonWrapperStyle
         ]}
@@ -612,12 +614,12 @@ export default class extends Component {
     let pages = []
 
     const pageStyle = [
-      { width: state.width, height: state.height },
-      styles.slide
+      { width: state.width, backgroundColor: "orange", height: "100%" /*height: state.height*/ },
+      /*styles.slide*/
     ]
     const pageStyleLoading = {
       width: this.state.width,
-      height: this.state.height,
+      // height: this.state.height,
       justifyContent: "center",
       alignItems: "center"
     }
@@ -661,7 +663,7 @@ export default class extends Component {
           styles.container,
           {
             width: state.width,
-            height: state.height
+            // height: state.height
           }
         ]}
       >
